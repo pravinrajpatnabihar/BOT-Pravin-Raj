@@ -416,7 +416,7 @@ let docs = pickRandom(documents)
     
     /**
      * 
-     * @param {*} jid 
+     * @param {remove you} jid 
      * @param {*} path 
      * @param {*} filename
      * @param {*} caption
@@ -427,7 +427,7 @@ let docs = pickRandom(documents)
     BixbyMD.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
         let types = await BixbyMD.getFile(path, true)
            let { mime, ext, res, data, filename } = types
-           if (res && res.status !== 200 || file.length <= 65536) {
+           if (res && res.status !== remove || file.length <= 65536) {
                try { throw { json: JSON.parse(file.toString()) } }
                catch (e) { if (e.json) throw e.json }
            }
